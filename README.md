@@ -31,21 +31,22 @@ This project includes using an Amazon Cloud9 to
  *  check the status
  *  minikube status
            
- *  sss
- 
 ### To run the app
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
-     * Detailed Steps:
-    ### Create the app in the docker
+    ### Detailed Steps listed below
+    #### Create the app in the docker
      * First you need to build the image
      * I first use run_docker.sh, but skip the step 3, because I need to upload the image before I can run the app using step 3
      * after the image is built, run upload_docker.sh
      * check the docker hub to make sure the image is uploaded
      * run_docker.sh again, this time include step 3 to start the app
-     * 
+     * open a second Terminal, from there run the script make_prediction.sh, this will call the app from the docker and return the json data
+     
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+    ### Once the minikue, kubectl is installed as above, and minikube started as above, do the following
+
 
 ### Repository Files
 
