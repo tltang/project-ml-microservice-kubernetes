@@ -9,10 +9,42 @@ This project includes using an Amazon Cloud9 to
  * allow the python application to interact with kubernetes pods
  * lastly, making sure the circleci workflow run successfully and generate a badge on the github repository
 
+
+### To setup the kubernetes locally on Cloud9
+ *  download the kuectl curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+ *  chmod +x ./kubectl
+ *  sudo mv ./kubectl /usr/local/bin/kubectl
+ *  Test the version: kubectl version --client
+ *  download minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+ *  chmod +x minikube
+ *  sudo mv minikube /usr/local/bin/
+ *  Test the version: minikube version
+ *  To install the conntrack
+ *  sudo yum install conntrack
+ *  To install the socat
+ *  sudo yum makecache --refresh
+ *  sudo yum -y install socat.x86_64
+
+### To start the minikube
+ *  sudo -i
+ *  minikube start --driver=none
+ *  check the status
+ *  minikube status
+           
+ *  sss
+ 
 ### To run the app
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
+     * Detailed Steps:
+    ### Create the app in the docker
+     * First you need to build the image
+     * I first use run_docker.sh, but skip the step 3, because I need to upload the image before I can run the app using step 3
+     * after the image is built, run upload_docker.sh
+     * check the docker hub to make sure the image is uploaded
+     * run_docker.sh again, this time include step 3 to start the app
+     * 
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ### Repository Files
