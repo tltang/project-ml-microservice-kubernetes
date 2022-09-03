@@ -1,1 +1,24 @@
-<paste log output from Kubernetes-mediated prediction, here>
+prediction screen:
+ec2-user:~/environment/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+Kubernetes pod screen
+
+(.devops) :/home/ec2-user/environment/project-ml-microservice-kubernetes $ ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "udacity" already exists
+NAME                       READY   STATUS    RESTARTS   AGE
+udacity                    1/1     Running   0          23m
+udacity-5d5859647d-7mn8h   1/1     Running   0          37m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+
+
+
+
