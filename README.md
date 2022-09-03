@@ -27,7 +27,7 @@ This project includes using an Amazon Cloud9 to
 
 ### To start the minikube
  *  sudo -i
- *  minikube start --driver=none
+ *  /usr/local/bin/minikube start --driver=none
  *  check the status
  *  minikube status
            
@@ -35,8 +35,8 @@ This project includes using an Amazon Cloud9 to
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
-    ### Detailed Steps listed below
-    #### Create the app in the docker
+    #### Detailed Steps listed below
+    ##### Create the app in the docker
      * First you need to build the image
      * I first use run_docker.sh, but skip the step 3, because I need to upload the image before I can run the app using step 3
      * after the image is built, run upload_docker.sh
@@ -45,8 +45,11 @@ This project includes using an Amazon Cloud9 to
      * open a second Terminal, from there run the script make_prediction.sh, this will call the app from the docker and return the json data
      
 3. Run in Kubernetes:  `./run_kubernetes.sh`
-    ### Once the minikue, kubectl is installed as above, and minikube started as above, do the following
-
+    #### Once the minikue, kubectl is installed as above, and minikube started as above, do the following
+     * sudo -i
+     * run script run_kubernetes.sh
+     * Note: the first time you run this, the pod may still be built, to ensure it is running before you call the predication script, you can run "kubectl get pod" to confirm the status 
+     * open a second Terminal, from there run the script make_prediction.sh, this will call the app from the kubernetes and return the json data
 
 ### Repository Files
 
