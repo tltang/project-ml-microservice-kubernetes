@@ -17,14 +17,14 @@ This project includes using an Amazon Cloud9 to
 
 ### Repository Files
 
-.circleci/config.yml:   the circleci job and workflow setup
-app.py:                 the python app, provided by udacity
-docker_out.txt:         screen output when run the app from docker
-kubernetes_out.txt:     screen output when run the app via kubernetes
-Dockerfile:             Docker Image setup script
-make_prediction.sh:     shell script to call the app (app.py), and returns the json predication output
-Makefile:               the work environment setup script
-requirements.txt:       dependencies, installed by calling make install
-run_docker.sh:          script to run the app from docker
-run_kubernetes.sh:      script to run the app via kubernetes
-upload_docker.sh:       script to deploy the docker image
+* .circleci/config.yml:   the circleci job and workflow setup
+* app.py:                 the python app, provided by udacity
+* docker_out.txt:         screen output when run the app from docker
+* kubernetes_out.txt:     screen output when run the app via kubernetes
+* Dockerfile:             Docker Image setup script
+* make_prediction.sh:     shell script to call the app (app.py), and returns the json predication output
+* Makefile:               the work environment setup script
+* requirements.txt:       dependencies, installed by calling make install
+* run_docker.sh:          script to run the app from docker
+* run_kubernetes.sh:      script to run the app via kubernetes
+* upload_docker.sh:       script to deploy the docker image
